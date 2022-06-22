@@ -22,6 +22,8 @@ def discover(client, spreadsheet_id):
                 key_props = None
                 # get primary key for the stream
                 for mdt in mdata:
+                    if mdt.get('metadata'):
+                        mdt['metadata']['inclusion'] = 'automatic'
                     table_key_properties = mdt.get('metadata', {}).get('table-key-properties')
                     if table_key_properties:
                         key_props = table_key_properties
