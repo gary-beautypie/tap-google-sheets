@@ -24,7 +24,7 @@ def discover(client, spreadsheet_id):
                 for mdt in mdata:
                     if mdt.get('metadata'):
                         mdt['metadata']['inclusion'] = 'automatic'
-                        mdt['metadata']['selected'] = true
+                        mdt['metadata']['selected'] = True
                     table_key_properties = mdt.get('metadata', {}).get('table-key-properties')
                     if table_key_properties:
                         key_props = table_key_properties
