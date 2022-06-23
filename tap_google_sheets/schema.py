@@ -164,8 +164,8 @@ def get_sheet_schema_columns(sheet):
                     # Interesting - order in the anyOf makes a difference.
                     # Number w/ singer.decimal must be listed last, otherwise errors occur.
                     col_properties = {
-                        'type': ['null', 'string'],
-                        'format': 'singer.decimal'
+                        'type': ['null', 'string', 'integer'],
+#                         'format': 'singer.decimal'
                     }
                     column_gs_type = 'numberType'
             # Catch-all to deal with other types and set to string
